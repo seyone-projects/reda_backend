@@ -1,0 +1,782 @@
+[
+  {
+    "url": "/dashboard",
+    "page": "Dashboard",
+    "paths": [
+      {
+        "path": "/dashboard",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "url": "admin/bank-account",
+    "page": "AdminBankAccount",
+    "paths": [
+      {
+        "path": "/association/details/amount/get",
+        "method": "GET"
+      },
+      {
+        "path": "/association/details/amount/update",
+        "method": "PUT"
+      },
+      {
+        "path": "/association/details/amount/create",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "admin/association-members",
+    "page": "EcMcMember",
+    "paths": [
+      {
+        "path": "/mc/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/mc/delete",
+        "method": "DELETE"
+      }
+    ]
+  },
+  {
+    "url": "admin/feed",
+    "page": "BlocksAndFlats",
+    "paths": [
+      {
+        "path": "/flats/get/over/all",
+        "method": "GET"
+      },
+      {
+        "path": "/blocks/get/all/list",
+        "method": "GET"
+      },
+      {
+        "path": "/blocks/delete",
+        "method": "DELETE"
+      }
+    ]
+  },
+  {
+    "url": "admin/feed",
+    "page": "FlatsView",
+    "paths": [
+      {
+        "path": "/flats/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/flats/delete",
+        "method": "DELETE"
+      }
+    ]
+  },
+  {
+    "url": "admin/feed",
+    "page": "FlatsForm",
+    "paths": [
+      {
+        "path": "/flats/update",
+        "method": "PUT"
+      },
+      {
+        "path": "/flats/create",
+        "method": "POST"
+      },
+      {
+        "path": "/blocks/list/get/all",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "url": "admin/feed",
+    "page": "BlocksAndFlats",
+    "paths": [
+      {
+        "path": "/parking/get/byflat",
+        "method": "GET"
+      },
+      {
+        "path": "/parking/update",
+        "method": "PUT"
+      },
+      {
+        "path": "/parking/update",
+        "method": "POST"
+      },
+      {
+        "path": "/parking/delete",
+        "method": "DELETE"
+      }
+    ]
+  },
+  {
+    "url": "admin/association-details",
+    "page": "AssociationDetails",
+    "paths": [
+      {
+        "path": "/city/get/state",
+        "method": "GET"
+      },
+      {
+        "path": "/city/get/city",
+        "method": "GET"
+      },
+      {
+        "path": "/association/update",
+        "method": "PUT"
+      },
+      {
+        "path": "/association/create",
+        "method": "POST"
+      },
+      {
+        "path": "/upload/image",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "/admin/association-ledger",
+    "page": "Ledger",
+    "paths": [
+      {
+        "path": "/association/details/amount/visible/members",
+        "method": "PUT"
+      },
+      { "path": "/association/details/amount/get", "method": "GET" },
+      { "path": "/association/get/logo", "method": "GET" },
+      { "path": "/association/get", "method": "GET" },
+      { "path": "/association/details/get/pdfReport", "method": "GET" },
+      { "path": "/association/details/delete/image", "method": "DELETE" },
+      { "path": "/association/details/update", "method": "PUT" },
+      { "path": "/association/details/create", "method": "POST" },
+      { "path": "/association/details/delete", "method": "DELETE" },
+      { "path": "/association/details/get", "method": "GET" },
+      { "path": "/log/get", "method": "GET" },
+      { "path": "/log/get/history", "method": "GET" },
+      { "path": "/log/get/pdfReport", "method": "GET" }
+    ]
+  },
+  {
+    "url": "admin/approval",
+    "page": "Approval",
+    "paths": [
+      {
+        "path": "/users/get/pending/users",
+        "method": "GET"
+      },
+      {
+        "path": "/users/update/status",
+        "method": "PUT"
+      }
+    ]
+  },
+  {
+    "url": "/admin/guest-parking",
+    "page": "GuestParking",
+    "paths": [
+      {
+        "path": "/guest/parking/get",
+        "method": "GET"
+      },
+      {
+        "path": "/guest/parking/delete",
+        "method": "DELETE"
+      }
+    ]
+  },
+  {
+    "url": "/admin/association-members",
+    "page": "EcMcMember",
+    "paths": [
+      {
+        "path": "/mc/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/mc/delete",
+        "method": "DELETE"
+      }
+    ]
+  },
+  {
+    "url": "/admin/document-list",
+    "page": "DocumentList",
+    "paths": [
+      {
+        "path": "/document/get",
+        "method": "GET"
+      },
+      {
+        "path": "/document/update/visible",
+        "method": "PUT"
+      },
+      {
+        "path": "/document/delete",
+        "method": "DELETE"
+      }
+    ]
+  },
+  {
+    "url": "/admin/material",
+    "page": "MaterialPurchaseSalesForm",
+    "paths": [
+      {
+        "path": "/material/get",
+        "method": "GET"
+      },
+      {
+        "path": "/material/used/create",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "/admin/warranty-list",
+    "page": "AddWarrenty",
+    "paths": [
+      {
+        "path": "/product/get",
+        "method": "GET"
+      },
+      {
+        "path": "/product/update",
+        "method": "PUT"
+      },
+      {
+        "path": "/product/create",
+        "method": "POST"
+      },
+      {
+        "path": "/product/delete",
+        "method": "DELETE"
+      }
+    ]
+  },
+  {
+    "url": "/resident",
+    "page": "ResidentDetails",
+    "paths": [
+      {
+        "path": "/users/resident/list",
+        "method": "GET"
+      },
+      {
+        "path": "/users/block",
+        "method": "PUT"
+      }
+    ]
+  },
+  {
+    "url": "/events/scroll-events",
+    "page": "ScrollEvents",
+    "paths": [
+      {
+        "path": "/events/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/events/update/runnable",
+        "method": "PUT"
+      },
+      {
+        "path": "/events/delete",
+        "method": "DELETE"
+      },
+      {
+        "path": "/events/update",
+        "method": "PUT"
+      },
+      {
+        "path": "/events/create",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "/events/notification-message",
+    "page": "AdminNotification",
+    "paths": [
+      {
+        "path": "/notification/get",
+        "method": "GET"
+      },
+      {
+        "path": "/flats/get/booked/list",
+        "method": "GET"
+      },
+      {
+        "path": "/blocks/list/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/notification/update",
+        "method": "PUT"
+      },
+      {
+        "path": "/notification/create",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "/events/notification-list",
+    "page": "NotificationList",
+    "paths": [
+      {
+        "path": "/notification/get",
+        "method": "GET"
+      },
+      {
+        "path": "/notification/delete",
+        "method": "DELETE"
+      }
+    ]
+  },
+  {
+    "url": "/amenity/list",
+    "page": "ExistingAmenity",
+    "paths": [
+      {
+        "path": "/amenity/get",
+        "method": "GET"
+      },
+      {
+        "path": "/amenity/type/get",
+        "method": "GET"
+      },
+      {
+        "path": "/blocks/list/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/flats/get/flat/list",
+        "method": "POST"
+      },
+      {
+        "path": "/amenity/update",
+        "method": "PUT"
+      },
+      {
+        "path": "/amenity/update",
+        "method": "POST"
+      },
+      {
+        "path": "/amenity/delete",
+        "method": "DELETE"
+      },
+      {
+        "path": "/amenity/type/create",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "/amenity/booked-list",
+    "page": "BookedAmenity",
+    "paths": [
+      {
+        "path": "/amenity/booking/get",
+        "method": "GET"
+      },
+      {
+        "path": "/amenity/booking/cancel",
+        "method": "PUT"
+      }
+    ]
+  },
+  {
+    "url": "/ticket",
+    "page": "TicketStatus",
+    "paths": [
+      {
+        "path": "/users/ifm/list",
+        "method": "GET"
+      },
+      {
+        "path": "/tickets/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/tickets/assign",
+        "method": "PUT"
+      }
+    ]
+  },
+  {
+    "url": "/maintenance-details/maintenance",
+    "page": "Maintenance",
+    "paths": [
+      {
+        "path": "/maintenance/option/create",
+        "method": "POST"
+      },
+      {
+        "path": "/maintenance/option/get",
+        "method": "GET"
+      },
+      {
+        "path": "/flats/maintenance/by",
+        "method": "GET"
+      },
+      {
+        "path": "/association/details/account/get",
+        "method": "GET"
+      },
+      {
+        "path": "/association/get/logo",
+        "method": "GET"
+      },
+      {
+        "path": "/maintenance/config/get",
+        "method": "GET"
+      },
+      {
+        "path": "/maintenance/config/get/all/history",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "url": "/maintenance-details/history",
+    "page": "History",
+    "paths": [
+      {
+        "path": "/maintenance/config/get/all/history",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "url": "/admin/ifm/staff/list",
+    "page": "AdminStaffList",
+    "paths": [
+      {
+        "path": "/ifm/staff/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/ifm/staff/get/staff/role",
+        "method": "GET"
+      },
+      {
+        "path": "/users/staff/delete",
+        "method": "DELETE"
+      },
+      {
+        "path": "/ifm/staff/assign/delete",
+        "method": "DELETE"
+      },
+      {
+        "path": "/ifm/staff/assign/update",
+        "method": "PUT"
+      },
+      {
+        "path": "/ifm/staff/assign",
+        "method": "POST"
+      },
+      {
+        "path": "/blocks/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/flats/get/flat/list/ifm",
+        "method": "POST"
+      },
+      {
+        "path": "/upload/image",
+        "method": "POST"
+      },
+      {
+        "path": "/upload/pdf",
+        "method": "POST"
+      },
+      {
+        "path": "/users/staff/update",
+        "method": "PUT"
+      },
+      {
+        "path": "/users/staff/create",
+        "method": "POST"
+      },
+      {
+        "path": "/ifm/staff/add/role",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "/admin/ifm/staff/attendance",
+    "page": "StaffAttendance",
+    "paths": [
+      {
+        "path": "/ifm/staff/attendance/timesheet/update",
+        "method": "POST"
+      },
+      {
+        "path": "/ifm/staff/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/ifm/staff/attendance/list",
+        "method": "GET"
+      },
+      {
+        "path": "/ifm/staff/timesheet/bulk/update",
+        "method": "POST"
+      },
+      {
+        "path": "/ifm/staff/timesheet/update",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "/admin/ifm/staff/vendors",
+    "page": "Vendors",
+    "paths": [
+      {
+        "path": "/vendor/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/vendor/delete",
+        "method": "DELETE"
+      }
+    ]
+  },
+  {
+    "url": "/admin/ifm/staff/visitor",
+    "page": "FindVisitors",
+    "paths": [
+      {
+        "path": "/flats/get/booked/list",
+        "method": "GET"
+      },
+      {
+        "path": "/blocks/list/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/users/by/flat",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "url": "/market-place/buy-view",
+    "page": "BuyAndVieww",
+    "paths": [
+      {
+        "path": "/market/get",
+        "method": "GET"
+      },
+      {
+        "path": "/market/wish/create",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "/market-place/sell",
+    "page": "SellProduct",
+    "paths": [
+      {
+        "path": "/market/create",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "/market-place/my-product",
+    "page": "MyProduct",
+    "paths": [
+      {
+        "path": "/market/get",
+        "method": "GET"
+      },
+      {
+        "path": "/market/delete",
+        "method": "DELETE"
+      },
+      {
+        "path": "/market/update-sold",
+        "method": "PUT"
+      }
+    ]
+  },
+  {
+    "url": "/find-visitors",
+    "page": "FindVisitors",
+    "paths": [
+      {
+        "path": "/flats/get/booked/list",
+        "method": "GET"
+      },
+      {
+        "path": "/blocks/list/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/users/by/flat",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "url": "/gallery",
+    "page": "Gallery",
+    "paths": [
+      {
+        "path": "/gallery/get",
+        "method": "GET"
+      },
+      {
+        "path": "/gallery/delete",
+        "method": "DELETE"
+      },
+      {
+        "path": "/gallery/comment/get",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "url": "/gallery",
+    "page": "GalleryForm",
+    "paths": [
+      {
+        "path": "/gallery/type/get",
+        "method": "GET"
+      },
+      {
+        "path": "/gallery/create",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "/gallery",
+    "page": "GalleryCategory",
+    "paths": [
+      {
+        "path": "/gallery/type/get",
+        "method": "GET"
+      },
+      {
+        "path": "/gallery/type/create",
+        "method": "POST"
+      },
+      {
+        "path": "/gallery/type/update",
+        "method": "PUT"
+      },
+      {
+        "path": "/gallery/type/delete",
+        "method": "DELETE"
+      }
+    ]
+  },
+  {
+    "url": "/feedback",
+    "page": "Feedback",
+    "paths": [
+      {
+        "path": "/feedback/create",
+        "method": "POST"
+      },
+      {
+        "path": "/feedback/get",
+        "method": "GET"
+      },
+      {
+        "path": "/feedback/delete",
+        "method": "DELETE"
+      },
+      {
+        "path": "/feedback/update",
+        "method": "PUT"
+      }
+    ]
+  },
+  {
+    "url": "/report",
+    "page": "ReportAdmin",
+    "paths": [
+      {
+        "path": "/association/get",
+        "method": "GET"
+      },
+      {
+        "path": "/ifm/staff/report/list",
+        "method": "GET"
+      },
+      {
+        "path": "/reports/get/due",
+        "method": "POST"
+      },
+      {
+        "path": "/reports/get/association/details",
+        "method": "POST"
+      },
+      {
+        "path": "/reports/get/user",
+        "method": "GET"
+      },
+      {
+        "path": "/reports/get/ifm/staff/attendance",
+        "method": "POST"
+      },
+      {
+        "path": "/reports/get/due",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "/help",
+    "page": "Help",
+    "paths": [
+      {
+        "path": "/emergency/service/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/emergency/contact/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/emergency/contact/toggle",
+        "method": "PUT"
+      }
+    ]
+  },
+  {
+    "url": "/help",
+    "page": "HelpCategoryForm",
+    "paths": [
+      {
+        "path": "/emergency/service/create",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "url": "/help",
+    "page": "EmergencyContactForm",
+    "paths": [
+      {
+        "path": "/emergency/service/get/all",
+        "method": "GET"
+      },
+      {
+        "path": "/emergency/contact/create",
+        "method": "POST"
+      }
+    ]
+  }
+]
