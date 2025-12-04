@@ -1,17 +1,23 @@
 import { Router } from "express";
-const router = Router();
 import {
   addUser,
   loginUser,
   registerUser,
+  createEmployee,
+  getUserList,
 } from "../../controllers/userController.js";
 
-import { verifyAllToken } from "../../utils/tokenAuthentication.js";
+import { verifyAllToken, authorizeRoles } from "../../utils/tokenAuthentication.js";
 
-router.route("/login").get(loginUser);
+const router = Router();
 
-router.route("/register").put(verifyAllToken, registerUser);
+router.post("/login", loginUser);
+router.post("/register", registerUser);
 
-router.route("/adduser").put(verifyAllToken, addUser);
+// Admin only routes
+router.post("/create-employee", verifyAllToken, authorizeRoles(["admin"]), createEmployee);
+
+router.post("/add-user", verifyAllToken, authorizeRoles(["admin"]), addUser);
+router.get("/list", verifyAllToken, authorizeRoles(["admin"]), getUserList);
 
 export default router;

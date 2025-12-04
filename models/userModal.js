@@ -24,6 +24,8 @@ const userSchema = new Schema(
     mobilenumber: {
       type: String,
       trim: true,
+      unique: true,
+      required: [true, "Mobile number is required"],
       match: [/^\d{10}$/, "Mobile number must be 10 digits"],
     },
     address: {
@@ -43,6 +45,8 @@ const userSchema = new Schema(
     },
     role: {
       type: String,
+      enum: ["admin", "employee", "user"],
+      default: "user",
     },
     sessionToken: {
       type: String,
