@@ -43,23 +43,66 @@ export async function registerUser(req, res) {
   }
 }
 
+export async function createEmployee(req, res) {
+  try {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ status: false, errors: errors.array() });
+    }
+
+    const { username, fullname, email, password, mobilenumber } = req.body;
+
+    const existingUser = await User.findOne({
+      $or: [{ email }, { mobilenumber }],
+    });
+    if (existingUser) {
+      return res.status(409).json({
+        status: false,
+        message: "Email or mobile number already exists",
+      });
+    }
+
+    const user = await User.create({
+      username,
+      fullname,
+      email,
+      password,
+      mobilenumber,
+      role: "employee",
+    });
+
+    return res.status(201).json({
+      status: true,
+      message: "Employee registered successfully",
+      data: { id: user._id, email: user.email },
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ status: false, message: "Server error" });
+  }
+}
+
 export async function loginUser(req, res) {
   try {
     const { mobilenumber, password } = req.body;
 
-    const user = await User.findOne({ mobilenumber });
+    const user = await User.findOne({ mobilenumber }).select("+password");
     if (!user) {
       return res
         .status(401)
-        .json({ status: false, message: "Invalid email or password" });
+        .json({ status: false, message: "Invalid mobile number or password" });
     }
 
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
       return res
         .status(401)
-        .json({ status: false, message: "Invalid email or password" });
+        .json({ status: false, message: "Invalid mobile number or password" });
     }
+
+    // Check if user is admin or employee (optional strict check if needed, but requirements say "using phonenumber and password can login")
+    // If we want to restrict login to only admin/employee for this specific endpoint, we can add a check.
+    // However, usually login is generic. The requirement "two types of roles must handled (employee,admin)" implies they exist.
 
     const token = user.generateToken();
     user.sessionToken = token;
@@ -77,6 +120,7 @@ export async function loginUser(req, res) {
       },
     });
   } catch (error) {
+    console.error(error);
     return res.status(500).json({ status: false, message: "Server error" });
   }
 }
